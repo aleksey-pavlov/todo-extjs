@@ -1,0 +1,2 @@
+library/ext
+library/ckeditor
