@@ -5,13 +5,16 @@
 		var $keys = array();
 
 		public function get() {
+
 			$this->acl->is('tasks','view');
+
 			$id = $this->request->getParam('id', 'get');
 			$year = $this->request->getParam('year', 'get');
 			$month = $this->request->getParam('month', 'get');
 			$user = $this->request->getParam('user', 'get');
 
 			$output = array();
+			
 			$sql = "SELECT t.*, 
 						u.username AS user_name 
 					FROM `tasks` AS t 
